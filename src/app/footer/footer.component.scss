@@ -1,0 +1,128 @@
+@import "../../assets/scss_partials/var";
+@import "../../assets/scss_partials/size";
+footer{
+    background-color: $themeColor1;
+    color: white;
+    padding: 2em 0 0 0;
+    h2{
+        font-weight: 500;
+        @include extra_small(){
+            text-align: center;
+            font-size: 1.2em;
+        }
+    }
+    ._img_container{
+        margin: 1em 0 0 0;
+        @include extra_small(){
+            text-align: center;
+        }
+        a{
+            display: inline-block;
+            margin: 0 1em;
+            &:first-child{
+                margin-left: 0;
+            }
+            &:last-child{
+                margin-right: 0;
+            }
+            img{
+                width: 100px;
+            }
+        }
+    }
+    ._f_box_container{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 2em;
+        margin: 1.5em 0;
+        border-bottom: 1px solid #929BAE;
+        padding-bottom: 2em;
+        @include extra_small(){
+            grid-template-columns: repeat(3,1fr);
+            ._box:nth-of-type(4){
+                grid-column: 1/4;
+                text-align: center;
+            }
+        }
+        ._box{
+            a{
+                display: block;
+                text-decoration: none;
+                color: #B5B5B5;
+                margin: .5em 0;
+                strong{
+                    color: white;
+                }
+            }
+            ._social_links{
+                a{
+                    display: inline-block;
+                    margin: 0 .3em;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                    svg{
+                        width: 30px;
+                    }
+                }
+            }
+        }
+    }
+    ._contact_info_sec{
+        @include extra_small(){
+            display: none;
+        }
+        h5{
+            font-size: 1em;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        ._c_conatiner{
+            text-align: center;
+            margin: 2em 0;
+            .__rounded_icon{
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                text-align: center;
+                background-color: white;
+                border-radius: 50%;
+                svg{
+                    width: 20px;
+                    margin: auto;
+                }
+            }
+            ._inline{
+                display: inline-block;
+                vertical-align: middle;
+                text-align: left;
+                &._mr5{
+                    margin-right: 5em !important;
+                }
+                &:first-child{
+                    margin-right: 1em;
+                }
+                &:last-child{
+                    font-size: .8em;
+                    a{
+                        color: $themeColor4;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+    }
+    ._bottom_footer{
+        text-align: center;
+        padding: 1em 0;
+        background-color: #414B68;
+        p{
+            line-height: 1.6em;
+            font-size: .8em;
+        }
+    }
+}

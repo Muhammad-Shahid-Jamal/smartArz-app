@@ -1,0 +1,62 @@
+@import "../../assets/scss_partials/var";
+._sub_filter_container{
+    margin: 1em 0;
+    padding: .5em 1em 1em 1em;
+    box-shadow: $shad;
+    align-items: center;
+    // ._sd_a{
+    //     a{
+    //         padding: .2em 2em;
+    //         display: inline-block;
+    //         border: 1px solid $themeColor1;
+    //         border-radius: 4em;
+    //         text-decoration: none;
+    //         color: $themeColor1;
+    //         background-color: #1e253a0f;
+    //         margin: 2px;
+    //         transition: all .3s linear;
+    //         &:hover{
+    //             background-color: $themeColor1;
+    //             color: white;
+    //         }
+    //     }
+    // }
+    ._sub_cat{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-gap: 1em;
+        a{
+            display: block;
+            width: 150px;
+            font-size: .8em;
+            color: $themeColor2;
+            text-decoration: none;
+            margin: .5em;
+            span{
+                color: black;
+            }
+        }
+    }
+    ._show_more{
+        border-top: 1px solid #c5c5c5;
+        padding: 10px 0 0 0;
+        position: relative;
+        button{
+            position: absolute;
+            right: 0;
+            background-color: transparent;
+            border: none;
+            color: #68DB11;
+            font-weight: 600;
+        }
+    }
+    ._check_box_container{
+        ._custome_checkbox{
+            display: inline-block;
+            margin: 0 7px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+}

@@ -1,0 +1,88 @@
+@import "./../../assets/scss_partials/var";
+._filter_side{
+    background: linear-gradient(to bottom, #e6e6e6, transparent);
+    padding: 0 1em;
+    h2{
+        text-align: center;
+        margin: 5px;
+        font-weight: 500;
+        color: $themeColor1;
+        position: relative;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            left: 0;
+            bottom: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent,#2b65ea9e, transparent);
+        }
+    }
+    ._custome_select_box{
+        margin-bottom: 10px;
+        select{
+            padding: 0.3em;
+            border-radius: 3px;
+        }
+    }
+    h4{
+        font-weight: 500;
+        margin-bottom: 10px;
+        padding-bottom: 7px;
+        position: relative;
+        &:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, #b7b7b7,#b7b7b7, transparent);
+        }
+    }
+    ._price_min_max{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 10px;
+        margin-bottom: 5px;
+        ._custome_input{
+            input{
+                padding: 10px;
+                font-size: 1em;
+                width: 100%;
+                border-radius: 3px;
+                border: 1px solid $themeColor1;
+            }
+        }
+    }
+    ._ch_container{
+        ._custome_checkbox{
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: $themeColor1;
+        }
+    }
+    ._keywords{
+        input{
+            width: 100%;
+            padding: 5px;
+            font-size: 1em;
+        }
+    }
+    ._search_btn{
+        font-size: 1em;
+        border: none;
+        background-color: $themeColor2;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+        transition: all .3s linear;
+        &:hover{
+            background-color: $themeColor1;
+        }
+    }
+}

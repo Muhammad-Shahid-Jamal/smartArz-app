@@ -1,0 +1,30 @@
+@import "../../assets/scss_partials/var";
+._order_by{
+    position: absolute;
+    right: 0;
+    top: 10px;
+    ._ls_btn{
+        padding: 5px 8px;
+        border: 1px solid $themeColor1;
+        background-color: transparent;
+        border-radius: 3px;
+        display: inline-grid;
+        align-items: center;
+        vertical-align: middle;
+        margin-right:5px;
+        svg{
+            display: inline-block;
+            width: 16px;
+            fill: $themeColor1;
+        }
+    }
+    ._custome_select_box{
+        display: inline-block;
+        width: 150px;
+        vertical-align: middle;
+        select{
+            border-radius: 3px;
+            padding: .4em;
+        }
+    }
+}

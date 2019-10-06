@@ -1,0 +1,347 @@
+._model_container{
+    display: none;
+}
+._bottom_line_enable{
+    position: relative;
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(to right, #b7b7b7, #b7b7b7, transparent);
+    }
+}
+._model_open_login{
+    overflow: hidden;
+    ._model_container{
+        display: block;
+        position: fixed;
+        z-index: 200000000;
+        width: 100%;
+        height: 100%;
+        background-color: #000000d6;
+        top: 0;
+        left: 0;
+        .container{
+            display: grid;
+            align-content: center;
+            height: 100%;
+            ._Login_view{
+                width: 50%;
+                background-color: white;
+                margin: auto;
+                padding: 1em;
+                border-radius: 3px;
+                position: relative;
+                opacity: 0;
+                top: 45px;
+                animation: slid_up .5s linear forwards;
+                @keyframes slid_up{
+                    0%{
+                        top: 45px;
+                        opacity: 0;
+                    }
+                    100%{
+                        top: 0;
+                        opacity: 1;
+                    }
+                }
+                h3{
+                    font-weight: 500;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    &._bottom_line_enable{
+                        &:after{
+                            left: 0;
+                            right: 0;
+                            width: 205px;
+                            margin: auto;
+                        }
+                    }
+                }
+                form{
+                    padding: 7px 15px 0 15px;
+                    input:not(.styled-checkbox){
+                        display: block;
+                        width: 100%;
+                        padding: 1em;
+                        border-radius: 5px;
+                        border: none;
+                        font-size: 1em;
+                        border: 1px solid lighten($themeColor3, 30);
+                        margin-bottom: 10px;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    ._grid_group{
+                        display: grid;
+                        grid-template-columns: repeat(2,1fr);
+                        font-size: 0.8em;
+                        grid-gap: 10px;
+                        label{
+                            color: $themeColor3;
+                            &::before{
+                                vertical-align: middle;
+                            }
+                        }
+                        a{
+                            text-align: right;
+                            width: 110px;
+                            margin-left: auto;
+                            text-decoration: none;
+                            color: $themeColor3;
+                            &:hover{
+                                color: $themeColor1;
+                            }
+                        }
+
+                        ._fb_btn{
+                            background-color: #4267B2;
+                            border: none;
+                            color: white;
+                            padding: 1em;
+                            border-radius: 3px;
+                            svg{
+                                fill: white;
+                                width: 13px;
+                                vertical-align: middle;
+                                margin-right: 5px;
+                            }
+                        }
+                        ._gmail_btn{
+                            color: white;
+                            border: none;
+                            background-color: #E3411F;
+                            padding: 1em;
+                            border-radius: 3px;
+                            svg{
+                                width: 20px;
+                                vertical-align: middle;
+                                margin-right: 5px;
+                                fill: white;
+                            }
+                        }
+                    }
+                    button{
+                        cursor: pointer;
+                    }
+                    button[type='submit']{
+                        border: none;
+                        width: 100%;
+                        padding: 1em;
+                        font-size: 1em;
+                        margin: 1em 0;
+                        background-color: $themeColor1;
+                        color: white;
+                        border-radius: 3px;
+                    }
+                }
+                ._model_footer{
+                    text-align: center;
+                    position: relative;
+                    margin: 10px 10px 0 10px;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        margin: auto;
+                        background-color: lighten($themeColor3, 20);
+                    }
+                    a{
+                        display: inline-block;
+                        text-decoration: none;
+                        padding: 5px;
+                        background-color: white;
+                        position: relative;
+                        color: $themeColor3;
+                        transition: all .2s linear;
+                        &:hover{
+                            color: $themeColor1;
+                        }
+                    }
+                }
+            }
+            ._Register_view{
+                display: none;
+            }
+        }
+    }
+}
+._model_open_register{
+    overflow: hidden;
+    ._model_container{
+        display: block;
+        position: fixed;
+        z-index: 200000000;
+        width: 100%;
+        height: 100%;
+        background-color: #000000d6;
+        top: 0;
+        left: 0;
+        .container{
+            display: grid;
+            align-content: center;
+            height: 100%;
+            ._Register_view{
+                width: 50%;
+                background-color: white;
+                margin: auto;
+                padding: 1em;
+                border-radius: 3px;
+                position: relative;
+                opacity: 0;
+                top: 45px;
+                animation: slid_up .5s linear forwards;
+                @keyframes slid_up{
+                    0%{
+                        top: 45px;
+                        opacity: 0;
+                    }
+                    100%{
+                        top: 0;
+                        opacity: 1;
+                    }
+                }
+                h3{
+                    font-weight: 500;
+                    text-align: center;
+                    margin-bottom: 10px;
+                    &._bottom_line_enable{
+                        &:after{
+                            left: 0;
+                            right: 0;
+                            width: 205px;
+                            margin: auto;
+                        }
+                    }
+                }
+                form{
+                    padding: 7px 15px 0 15px;
+                    input:not(.styled-checkbox){
+                        display: block;
+                        width: 100%;
+                        padding: 1em;
+                        border-radius: 5px;
+                        border: none;
+                        font-size: 1em;
+                        border: 1px solid lighten($themeColor3, 30);
+                        margin-bottom: 10px;
+                        &:focus{
+                            outline: none;
+                        }
+                    }
+                    ._grid_group{
+                        display: grid;
+                        grid-template-columns: repeat(2,1fr);
+                        font-size: 0.8em;
+                        grid-gap: 10px;
+                        label{
+                            color: $themeColor3;
+                            &::before{
+                                vertical-align: middle;
+                            }
+                        }
+                        a{
+                            text-align: right;
+                            width: 110px;
+                            margin-left: auto;
+                            text-decoration: none;
+                            color: $themeColor3;
+                            &:hover{
+                                color: $themeColor1;
+                            }
+                        }
+
+                        ._fb_btn{
+                            background-color: #4267B2;
+                            border: none;
+                            color: white;
+                            padding: 1em;
+                            border-radius: 3px;
+                            svg{
+                                fill: white;
+                                width: 13px;
+                                vertical-align: middle;
+                                margin-right: 5px;
+                            }
+                        }
+                        ._gmail_btn{
+                            color: white;
+                            border: none;
+                            background-color: #E3411F;
+                            padding: 1em;
+                            border-radius: 3px;
+                            svg{
+                                width: 20px;
+                                vertical-align: middle;
+                                margin-right: 5px;
+                                fill: white;
+                            }
+                        }
+                    }
+                    button{
+                        cursor: pointer;
+                    }
+                    button[type='submit']{
+                        border: none;
+                        width: 100%;
+                        padding: 1em;
+                        font-size: 1em;
+                        margin: 1em 0;
+                        background-color: $themeColor1;
+                        color: white;
+                        border-radius: 3px;
+                    }
+                }
+                ._model_footer{
+                    text-align: center;
+                    position: relative;
+                    margin: 10px 10px 0 10px;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 1px;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        margin: auto;
+                        background-color: lighten($themeColor3, 20);
+                    }
+                    p{
+                        display: inline-block;
+                        padding: 0 5px;
+                        background-color: white;
+                        position: relative;
+                        font-size: 12px;
+                        a{
+                            color: $themeColor2;
+                        }
+                    }
+                    a{
+                        display: inline-block;
+                        text-decoration: none;
+                        padding: 5px;
+                        background-color: white;
+                        position: relative;
+                        color: $themeColor3;
+                        transition: all .2s linear;
+                        &:hover{
+                            color: $themeColor1;
+                        }
+                    }
+                }
+            }
+            ._Login_view{
+                display: none;
+            }
+        }
+    }
+}

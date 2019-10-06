@@ -1,0 +1,59 @@
+.paginationjs{
+    .paginationjs-pages{
+        text-align: center;
+        a{
+            text-decoration: none;
+        }
+        ul{
+            display: inline-block;
+            li{
+                display: inline-block;
+            }
+        }
+        .J-paginationjs-page{
+            font-size: .9em;
+            &.active{
+                a{
+                    color: white;
+                    background-color: $themeColor2;
+                    border-radius: 50%;
+                }
+            }
+            a{
+                width: 30px;
+                height: 30px;
+                display: grid;
+                align-items: center;
+                margin: 0 .5em;
+                font-weight: 600;
+                color: $themeColor3;
+            }
+        }
+        .paginationjs-prev{
+            &.J-paginationjs-previous{
+
+            }
+            &.disabled{
+                opacity: .4;
+                ._page_nav_control{
+                    svg{
+                        fill: $themeColor3;
+                    }
+                }
+            }
+        }
+        .paginationjs-next{
+            &.J-paginationjs-next{
+
+            }
+            &.disabled{
+                opacity: .4;
+                ._page_nav_control{
+                    svg{
+                        fill: $themeColor3;
+                    }
+                }
+            }
+        }
+    }
+}

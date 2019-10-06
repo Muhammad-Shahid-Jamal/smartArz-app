@@ -1,0 +1,24 @@
+<app-header></app-header>
+<main>
+  <div class="container">
+    <div class="_grid_view">
+      <app-filter-comp></app-filter-comp>
+      <div class="_detail_list_side">
+        <app-breadcrumb></app-breadcrumb>
+        <app-sub-filter></app-sub-filter>
+        <app-list-item *ngFor="let item of items" [item]="item"></app-list-item>
+        <!-- <app-pagination-comp></app-pagination-comp> -->
+      </div>
+    </div>
+  </div>
+</main>
+<section class="container">
+  <div class="_sell_anything_section">
+      <h3 class="_title_brand _text_center">Sell anything on Company Name</h3>
+      <button class="_btn">
+          Add Post +
+      </button>
+  </div>
+</section>
+<app-footer></app-footer>
+<!-- <router-outlet></router-outlet> -->
